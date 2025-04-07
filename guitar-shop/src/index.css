@@ -1,0 +1,145 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        background: linear-gradient(to top,#253750 ,#0A1A2F, #000000 ) no-repeat ;
+        background-size: cover;
+        color: #222;
+        font-family: "Montserrat", sans-serif;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+        color: #E0E0E0;
+        font-weight: 300;
+    }
+
+    .wrapper{
+        width: 1280px;
+        margin: 50px auto;
+    }
+
+    Header .logo{
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    header ul.nav {
+        float: right;
+        list-style: none;
+    }
+
+    header ul.nav li {
+        display: inline;
+        margin-left: 25px;
+        cursor: pointer;
+        transition: opacity 500ms ease;
+    }
+
+    header ul.nav li:hover{
+        opacity: 0.7;
+    }
+
+    Header .presentation {
+        margin: 50px 0;
+        background: url('./img/backGroundImg.jpg') no-repeat;
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.99));
+        background-color: #aa000000;
+    border: 2px solid #fff; 
+    border-radius: 10px; 
+    background-blend-mode: multiply;
+    background-position: center, center;
+    position: relative;
+    }
+    Header .presentation::after{
+        content: "IBANEZ JCRG2101";
+        position: absolute;   
+        top: 430px; 
+        left: 60px;
+        font-size: 24px;
+        color: #C0C0C0;
+    }
+
+    header .presentation::before{
+        content: 'Crafted for Precision, Played with Passion.';
+        position: absolute; 
+        top: 460px;
+        left: 60px;
+        font-size: 12px;
+        font-weight: 300;
+        color: #fff;
+    }
+    main{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: white;
+        filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.5));
+        
+    }
+
+        main .item{
+            width: 30%;
+            margin-bottom: 50px;
+            background: #0D1522 ;
+            border-radius: 10px;
+            border: 2px solid white;
+            padding-left: 30px;
+            padding-bottom: 15px;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+      
+
+        main .item img{
+            width: 100%; 
+            height: 300px; 
+            object-fit: contain; 
+            display: block; 
+            margin: 0 auto;
+            border-radius: 10px 10px 0 0; 
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+
+
+        main .item:hover{
+    transform: scale(1.05);
+        }
+        main h2, main p, main b {
+            margin: 10px 20px;
+           
+        }
+    footer{
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    main .add-to-card{
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        background: red;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 100%;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    main .add-to-card:hover{
+        transform: scale(1.5) translateY(-5px);
+        transition: transform 0.5s ease;
+    }
+    /*  #253750
+        #D1C4E9 ( лавандовый, нежно розовый)
+
+    */
