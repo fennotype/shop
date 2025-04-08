@@ -30,6 +30,19 @@
         list-style: none;
     }
 
+    header .shop-cart-button{
+        float: right;
+        cursor: pointer;
+        transition: color 500ms ease;
+        margin-top: 2px;
+    
+    }
+    header .shop-cart-button:hover,
+    header .shop-cart-button.active{
+        color: red;
+    }
+    
+
     header ul.nav li {
         display: inline;
         margin-left: 25px;
@@ -126,7 +139,8 @@
         position: absolute;
         right: 20px;
         bottom: 15px;
-        background: red;
+        background: #D1C4E9 ;
+        color: #0A1A2F ;
         width: 35px;
         height: 35px;
         text-align: center;
@@ -143,3 +157,5 @@
         #D1C4E9 ( лавандовый, нежно розовый)
 
     */
+
+ 
