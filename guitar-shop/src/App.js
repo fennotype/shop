@@ -1,35 +1,48 @@
-import React,{ useEffect, useState } from "react";
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Items from "./components/items"
+  import React,{ useEffect, useState } from "react";
+  import Header from "./components/Header"
+  import Footer from "./components/Footer"
+  import Items from "./components/items"
+  import Dashboard from "./components/dashboard"; 
+  import Autorization from "./components/authorization";
+  import Registration from "./components/registration";
+  import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+  const App = () => {
+    const [items, setItems] = useState([]);
 
-const App = () => {
-  const [items, setItems] = useState([]);
+    const callBackendAPI = async () => {
+      const response = await fetch('/api/items');
+      const body = await response.json();
 
-  const callBackendAPI = async () => {
-    const response = await fetch('/api/items');
-    const body = await response.json();
+      if (response.status !== 200) {
+        throw Error(body.message)
+      }
+      return body;
+    };
 
-    if (response.status !== 200) {
-      throw Error(body.message)
-    }
-    return body;
-  };
+    useEffect(() => {
+      callBackendAPI()
+      .then(res => setItems(res.express))
+      .catch(err => console.log(err));
+    }, []);
 
-  useEffect(() => {
-    callBackendAPI()
-    .then(res => setItems(res.express))
-    .catch(err => console.log(err));
-  }, []);
+    return (
+    
+      <Router>
+        <body className="home-page">
+      <div className="wrapper">
+        <Header />
+        <Routes>
+          
+          <Route path="/" element={<Items items={items} />} />
+          <Route path="/authorization" element={<Autorization />} />
+        </Routes>
+        <Footer />
+        
+      </div>
+      </body>
+      </Router>
+    );
+    };
 
-  return (
-    <div className="wrapper">
-      <Header />
-      <Items items={items} />
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
+  export default App;
