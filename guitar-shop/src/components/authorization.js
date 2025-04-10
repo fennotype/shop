@@ -1,19 +1,53 @@
 import React from 'react';
+import { Link, useNavigate }  from 'react-router-dom';
+    
+    export default function Authorization() {
+        const navigate = useNavigate();
 
-const Authorization = () => {
-    return (
-        <body className="authorization">
-        <div className="authorization-form">
-            <h1>Авторизация</h1>
-            <form action="/dashboard" method="POST">
-                <input type="text" name="username" placeholder="Имя пользователя" required />
-                <input type="password" name="password" placeholder="Пароль" required />
-                <button type="submit">Войти</button>
-            </form>
-            <p>Нет аккаунта? <a href="/registration">Зарегистрироваться</a></p>
-        </div>
-        </body>
-    );
-};
+        
+        const handleSubmit = async (e) => {
+            e.preventDefault(); 
+            const username = e.target.username.value;
+            const password = e.target.password.value;
 
-export default Authorization;
+            console.log('handleSubmit сработал');
+            console.log('Отправляем:', username, password);
+
+            try {
+
+                console.log('Отправка данных:', username, password);
+                const response = await fetch('http://localhost:5000/api/authorization', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+                });
+            
+                const data = await response.json();
+                console.log('Ответ сервера:', data);
+            
+                if (response.ok) {
+                alert('Авторизация успешна!');
+                navigate('/dashboard'); // Перенаправление на страницу личного кабинета
+                } else {
+                alert(data.error || 'Ошибка авторизации');
+                }
+            } catch (err) {
+                console.error('Ошибка:', err);
+                alert('Произошла ошибка при авторизации');
+            }
+        };
+        return (
+            <div className="form">
+                <h1>Авторизация</h1>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" name="username" placeholder="имя пользователя" required />
+                    <input type="password" name="password" placeholder="Пароль" required />
+                    <button type="submit" >Войти</button>
+                </form>
+                <p>Нет аккаунта? <a href="/registration">Зарегистрироваться</a></p>
+            </div>
+        );
+    
+    }

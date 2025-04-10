@@ -16,9 +16,9 @@
               
             <FaShoppingCart onClick={()=> setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && `active`}`}/>
               <Link to="/authorization">
-            <FaUser className='user-button' href = 'https://localhost:3000/dashboard'/>
+            <FaUser className='user-button'/>
             </Link>
-
+        
 
                 <Link to= "/">
                 <span className='logo'>Guitar Staff</span>
