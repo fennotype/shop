@@ -7,6 +7,7 @@
       const location = useLocation()
       const isDashboard = location.pathname === '/dashboard'
       const isAutorization = location.pathname === '/authorization'
+      const isRegistration = location.pathname === '/registration'
       let [cartOpen, setCartOpen] = React.useState(false)
 
 
@@ -37,7 +38,7 @@
                   }}
             </div>
             
-            {!isAutorization && !isDashboard && (
+            {!isRegistration && !isAutorization && !isDashboard && (
           <div className="presentation"></div>
         )}
         </header>

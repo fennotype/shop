@@ -29,7 +29,7 @@ import { Link, useNavigate }  from 'react-router-dom';
             
                 if (response.ok) {
                 alert('Авторизация успешна!');
-                navigate('/dashboard'); // Перенаправление на страницу личного кабинета
+                navigate('/dashboard'); 
                 } else {
                 alert(data.error || 'Ошибка авторизации');
                 }
@@ -46,7 +46,7 @@ import { Link, useNavigate }  from 'react-router-dom';
                     <input type="password" name="password" placeholder="Пароль" required />
                     <button type="submit" >Войти</button>
                 </form>
-                <p>Нет аккаунта? <a href="/registration">Зарегистрироваться</a></p>
+                <p>Нет аккаунта? <Link to = '/registration' >Зарегистрироваться</Link></p>
             </div>
         );
     
