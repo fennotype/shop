@@ -1,220 +1,223 @@
-            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+                    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-            *{
-                margin: 0;
-                padding: 0;
-            }
+                    *{
+                        margin: 0;
+                        padding: 0;
+                    }
 
-            body{
-                background: linear-gradient(to top,#253750 ,#0A1A2F, #000000 ) no-repeat ;
-                background-size: cover;
-                background-attachment: fixed;
-                background-position: center;
-                color: #222;
-                font-family: "Montserrat", sans-serif;
-                text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
-                color: #E0E0E0;
-                font-weight: 300;
+                    body{
+                        background: linear-gradient(to top,#FFD1DC 0%, #C9DABE 100%) no-repeat ;
+                        background-size: cover;
+                        background-attachment: fixed;
+                        background-position: center;
+                        color: #fff;
+                        font-family: "Montserrat", sans-serif;
+                        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+                        color: #7A1623  ;
+                        font-weight: 350;
+                        
+                    }
+
                 
-            }
+                .form{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100vh;
+                    }
 
-        
-          .form{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100vh;
-            }
+                    .form input{
+                        width: 300px;
+                        height: 40px;
+                        margin-bottom: 20px;
+                        border-radius: 5px;
+                        border: none;
+                        padding-left: 10px;
+                    }
 
-            .form input{
-                width: 300px;
-                height: 40px;
-                margin-bottom: 20px;
-                border-radius: 5px;
-                border: none;
-                padding-left: 10px;
-            }
+                    .form button{   /* изменить цвета чтоб гуд было */
+                        width: 300px;
+                        height: 40px;
+                        background-color: #D1C4E9 ;
+                        color: #0A1A2F ;
+                        border-radius: 5px;
+                        border: none;
+                    }
 
-            .form button{   /* изменить цвета чтоб гуд было */
-                width: 300px;
-                height: 40px;
-                background-color: #D1C4E9 ;
-                color: #0A1A2F ;
-                border-radius: 5px;
-                border: none;
-            }
+                    .form button:hover{
+                        background-color: #0A1A2F ;
+                        color: #D1C4E9 ;
+                    }
 
-            .form button:hover{
-                background-color: #0A1A2F ;
-                color: #D1C4E9 ;
-            }
-
-          
-
-            .wrapper{
-                width: 1280px;
-                margin: 50px auto;
                 
-            }
 
-            Header .logo{
-                font-weight: 600;
-                font-size: 20px;
-            }
+                    .wrapper{
+                        width: 1280px;
+                        margin: 50px auto;
+                        
+                    }
 
-            header ul.nav {
-                float: right;
-                list-style: none;
-            }
+                    Header .logo{
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
 
-            header .shop-cart-button{
-                float: right;
-                cursor: pointer;
-                transition: color 500ms ease;
-                margin-top: 2px;
-            }
-            header .shop-cart-button:hover,
-            header .shop-cart-button.active{
-                color: red;
-            }
+                    header ul.nav {
+                        float: right;
+                        list-style: none;
+                    }
 
-            header .user-button{
-                float: right;
-                cursor: pointer;
-                transition: color 500ms ease;
-                margin-top: 2px;
-                margin-right: 20px;
-            }
-            
-            header .user-button:active{
-                color: red;
+                    header .shop-cart-button{
+                        float: right;
+                        cursor: pointer;
+                        transition: color 500ms ease;
+                        margin-top: 2px;
+                    }
+                    header .shop-cart-button:hover,
+                    header .shop-cart-button.active{
+                        color: red;
+                    }
 
-            }
-            header ul.nav{
-                margin-right: 20px;
-            }
+                    header .user-button{
+                        float: right;
+                        cursor: pointer;
+                        transition: color 500ms ease;
+                        margin-top: 2px;
+                        margin-right: 20px;
+                    }
+                    
+                    header .user-button:active{
+                        color: red;
 
-            header ul.nav li {
-                display: inline;
-                margin-left: 20px;
-                cursor: pointer;
-                transition: opacity 500ms ease;
-            }
+                    }
+                    header ul.nav{
+                        margin-right: 20px;
+                    }
 
-            header ul.nav li:hover{
-                opacity: 0.7;
-            }
+                    header ul.nav li {
+                        display: inline;
+                        margin-left: 20px;
+                        cursor: pointer;
+                        transition: opacity 500ms ease;
+                    }
 
-            Header .presentation {
-                z-index: 10;
-                margin: 50px 0;
-                background: url('./img/backGroundImg.jpg') no-repeat;
-                width: 100%;
-                height: 500px;
-                background-size: cover;
-                filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.99));
-                background-color: #aa000000;
-            border: 2px solid #fff; 
-            border-radius: 10px; 
-            background-blend-mode: multiply;
-            background-position: center, center;
-            position: relative;
-            }
-            Header .presentation::after{
-                content: "IBANEZ JCRG2101";
-                position: absolute;   
-                top: 430px; 
-                left: 60px;
-                font-size: 24px;
-                color: #C0C0C0;
-            }
+                    header ul.nav li:hover{
+                        opacity: 0.7;
+                    }
 
-            header .presentation::before{
-                content: 'Crafted for Precision, Played with Passion.';
-                position: absolute; 
-                top: 460px;
-                left: 60px;
-                font-size: 12px;
-                font-weight: 300;
-                color: #fff;
-            }
-            main{
-                display: flex;
-                width: 100%;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                color: white;
-                filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.5));
-                
-            }
-
-                main .item{
-                    width: 30%;
-                    margin-bottom: 50px;
-                    background: #0D1522 ;
-                    border-radius: 10px;
-                    border: 2px solid white;
-                    padding-left: 30px;
-                    padding-bottom: 15px;
-                    overflow: hidden;
+                    Header .presentation {
+                        z-index: 10;
+                        margin: 50px 0;
+                        background: url('./img/backGroundImg 2.jpg') no-repeat;
+                        width: 100%;
+                        height: 500px;
+                        background-size: cover;
+                        filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.99));
+                        background-color: #aa000000;
+                    border: 2px solid #fff; 
+                    border-radius: 10px; 
+                    background-blend-mode: multiply;
+                    background-position: center, center;
                     position: relative;
-                    padding-bottom: 20px;
-                }
+                    }
+                    Header .presentation::after{
+                        content: "Arctic Luxe";
+                        position: absolute;   
+                        top: 430px; 
+                        left: 60px;
+                        font-size: 26px;
+                        color: #ffffff    ;
+                        -webkit-text-stroke: 1px #ffffff  ;
+                    }
 
-            
+                    header .presentation::before{
+                        content: 'Сочетание скандинавской простоты и мраморной элегантности';
+                        position: absolute; 
+                        top: 460px;
+                        left: 60px;
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #ffffff   ;
+                        -webkit-text-stroke: 1px #ffffff  ;
+                    }
+                    main{
+                        display: flex;
+                        width: 100%;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        color: #3a3a3a;
+                        filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.5));
+                        
+                    }
 
-                main .item img{
-                    width: 100%; 
-                    height: 300px; 
-                    object-fit: contain; 
-                    display: block; 
-                    margin: 0 auto;
-                    border-radius: 10px 10px 0 0; 
-                    transition: transform 0.5s ease;
-                    cursor: pointer;
-                }
+                        main .item{
+                            width: 30%;
+                            color: #3A3A3A ;
+                            margin-bottom: 50px;
+                            background: #F5F5DC ;
+                            border-radius: 10px;
+                            border: 2px solid white;
+                            padding-left: 30px;
+                            padding-bottom: 15px;
+                            overflow: hidden;
+                            position: relative;
+                            padding-bottom: 20px;
+                        }
+
+                    
+
+                        main .item img{
+                            width: 100%; 
+                            height: 300px; 
+                            object-fit: contain; 
+                            display: block; 
+                            margin: 0 auto;
+                            border-radius: 10px 10px 0 0; 
+                            transition: transform 0.5s ease;
+                            cursor: pointer;
+                        }
 
 
-                main .item:hover{
-            transform: scale(1.05);
-                }
-                main h2, main p, main b {
-                    margin: 10px 20px;
-                
-                }
-            footer{
-                text-align: center;
-                margin-top: 100px;
-            }
+                        main .item:hover{
+                    transform: scale(1.05);
+                        }
+                        main h2, main p, main b {
+                            margin: 10px 20px;
+                        
+                        }
+                    footer{
+                        text-align: center;
+                        margin-top: 100px;
+                    }
 
-            main .add-to-card{
-                position: absolute;
-                right: 20px;
-                bottom: 15px;
-                background: #D1C4E9 ;
-                color: #0A1A2F ;
-                width: 35px;
-                height: 35px;
-                text-align: center;
-                line-height: 35px;
-                border-radius: 100%;
-                cursor: pointer;
-                font-weight: 500;
-            }
-            main .add-to-card:hover{
-                transform: scale(1.5) translateY(-5px);
-                transition: transform 0.5s ease;
-            }
+                    main .add-to-card{
+                        position: absolute;
+                        right: 20px;
+                        bottom: 15px;
+                        background: #D1C4E9 ;
+                        color: #0A1A2F ;
+                        width: 35px;
+                        height: 35px;
+                        text-align: center;
+                        line-height: 35px;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        font-weight: 500;
+                    }
+                    main .add-to-card:hover{
+                        transform: scale(1.5) translateY(-5px);
+                        transition: transform 0.5s ease;
+                    }
 
-            a {
-                text-decoration: none; /* Убирает подчеркивание */
-                color: inherit; /* Наследует цвет текста от родителя */
-            }
-            /*  #253750
-                #D1C4E9 ( лавандовый, нежно розовый)
+                    a {
+                        text-decoration: none; /* Убирает подчеркивание */
+                        color: inherit; /* Наследует цвет текста от родителя */
+                    }
+                    /*  #253750
+                        #D1C4E9 ( лавандовый, нежно розовый)
 
-            */
+                    */
 
-        
+                    

@@ -22,7 +22,7 @@
         
 
                 <Link to= "/">
-                <span className='logo'>Guitar Staff</span>
+                <span className='logo'>kerama marazzi</span>
                 </Link>
 
 
