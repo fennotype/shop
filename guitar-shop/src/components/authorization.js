@@ -28,7 +28,7 @@ import { Link, useNavigate }  from 'react-router-dom';
                 console.log('Ответ сервера:', data);
             
                 if (response.ok) {
-                alert('Авторизация успешна!');
+                
                 navigate('/dashboard'); 
                 } else {
                 alert(data.error || 'Ошибка авторизации');
