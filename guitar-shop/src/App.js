@@ -5,6 +5,7 @@
       import Dashboard from "./components/dashboard"; 
       import Autorization from "./components/authorization";
       import Registration from "./components/registration";
+      import DashboardAdmin from "./components/dashboardAdmin";
       import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
       const App = () => {
@@ -33,6 +34,8 @@
           <div className="wrapper">
             <Header />
             <Routes>
+              <Route path="/registration" element={<Registration />} />
+              <Route path="/dashboardAdmin" element={<DashboardAdmin />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/" element={<Items items={items} />} />
               <Route path="/authorization" element={<Autorization />} />
