@@ -18,13 +18,31 @@ const { v4: uuidv4 } = require('uuid');
     app.get (`/api/items`, async (req, res) => {
       try {
         const result = await pool.query('SELECT * FROM floortiles');
-        console.log('Получены данные:', result.rows);
+        // console.log('Получены данные:', result.rows);
         res.json(result.rows);
       } catch (err) {
         console.error(err);
         res.status(500).send('Server error');
       }
     });
+
+    app.get('/api/product/:id', async (req, res) => {
+  const id = parseInt(req.params.id, 10);
+  if (isNaN(id)) {
+    return res.status(400).json({ error: 'Неверный ID' });  
+  } try {
+    const result = await pool.query('SELECT * FROM floortiles WHERE id = $1', [id]);
+    console.log(`возвращенные данные:`, result.rows )
+    if (result.rows.length > 0) {
+      res.json(result.rows[0]);
+    } else {
+      res.status(404).json({ error: 'Товар не найден' });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Ошибка сервера' });
+  }
+});
 
     app.post(`/api/authorization`, async (req, res) => {
       const { username, password } = req.body;

@@ -11,6 +11,7 @@
         const isDashboardAdmin = location.pathname === '/dashboardAdmin'
         const isCart = location.pathname === '/cart'
         const isInfo = location.pathname === '/info'
+        const isProduct = location.pathname === '/product/:id'
         let [cartOpen, setCartOpen] = React.useState(false)
 
 
@@ -43,7 +44,7 @@
                     }}
               </div>
               
-              {!isRegistration && !isAutorization && !isDashboard && !isDashboardAdmin && !isCart && !isInfo &&(
+              {!isRegistration && !isAutorization && !isDashboard && !isDashboardAdmin && !isCart && !isInfo && !isProduct &&(
             <div className="presentation"></div>
           )}
           </header>

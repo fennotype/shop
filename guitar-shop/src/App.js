@@ -8,6 +8,7 @@
       import DashboardAdmin from "./components/dashboardAdmin";
       import Cart from "./components/cart";  
       import Info from "./components/information"
+      import ProductDetail from "./components/product"
       import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
       const App = () => {
@@ -43,6 +44,7 @@
               <Route path="/authorization" element={<Autorization />} />
               <Route path="/cart" element={ <div className="cart-wrapper"> <Cart items={items} /> </div>} />
               <Route path="/info" element={<Info />} />
+              <Route path="/product/:id" component={ProductDetail} />
             </Routes>
             <Footer />
             
