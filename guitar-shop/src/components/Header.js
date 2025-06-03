@@ -8,6 +8,9 @@
         const isDashboard = location.pathname === '/dashboard'
         const isAutorization = location.pathname === '/authorization'
         const isRegistration = location.pathname === '/registration'
+        const isDashboardAdmin = location.pathname === '/dashboardAdmin'
+        const isCart = location.pathname === '/cart'
+        const isInfo = location.pathname === '/info'
         let [cartOpen, setCartOpen] = React.useState(false)
 
 
@@ -15,7 +18,9 @@
           <header>
               <div>
                 
-              <FaShoppingCart onClick={()=> setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && `active`}`}/>
+            <Link to="/cart">
+              <FaShoppingCart className={`shop-cart-button ${cartOpen && `active`}`}/>
+              </Link>  
                 <Link to="/authorization">
               <FaUser className='user-button'/>
               </Link>
@@ -27,7 +32,7 @@
 
 
                   <ul className='nav'>
-                    <li>про нас</li>
+                  <Link to = '/info'>  <li>про нас</li> </Link>
                     <li>контакты</li>
                   <Link to="/authorization"> <li>кабинет</li> </Link>
                   </ul>
@@ -38,7 +43,7 @@
                     }}
               </div>
               
-              {!isRegistration && !isAutorization && !isDashboard && (
+              {!isRegistration && !isAutorization && !isDashboard && !isDashboardAdmin && !isCart && !isInfo &&(
             <div className="presentation"></div>
           )}
           </header>

@@ -26,10 +26,8 @@
                 
                     const data = await response.json();
                     console.log('Ответ сервера:', data);
-                
                     
                     if (response.ok) {
-                    
                     if (data.user && data.user.role === 'admin') {
                     navigate('/dashboardAdmin');
                     } else {
@@ -38,7 +36,7 @@
                     }  
                     else {
                         console.error('Ошибка авторизации:', data.error);
-                        alert(data.error || 'Неверные имя пользователя или пароль');
+                        alert(data.error || 'Неверные имя пользователя или пароль'); // изменена и теперь работает
                     }
                 } catch (err) {
                     console.error('Ошибка:', err);

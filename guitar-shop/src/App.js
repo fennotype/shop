@@ -6,6 +6,8 @@
       import Autorization from "./components/authorization";
       import Registration from "./components/registration";
       import DashboardAdmin from "./components/dashboardAdmin";
+      import Cart from "./components/cart";  
+      import Info from "./components/information"
       import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
       const App = () => {
@@ -39,6 +41,8 @@
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/" element={<Items items={items} />} />
               <Route path="/authorization" element={<Autorization />} />
+              <Route path="/cart" element={ <div className="cart-wrapper"> <Cart items={items} /> </div>} />
+              <Route path="/info" element={<Info />} />
             </Routes>
             <Footer />
             
