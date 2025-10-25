@@ -6,7 +6,7 @@ export default function Cart({ items = [], onRemove }) {
   // Новый обработчик оформления заказа
   const handleCheckout = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/create-payment', {
+      const response = await fetch('/api/create-payment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -34,7 +34,7 @@ export default function Cart({ items = [], onRemove }) {
         <ul className="cart-list">
           {items.map(item => (
             <li key={item.id} className="cart-item">
-              <img src={item.image} alt={item.title} width={50} height={50} />
+              <img src={item.img ? `/img/${item.img}` : item.image} alt={item.title} width={50} height={50} />
               <div className="cart-info">
                 <span>{item.title}</span>
                 <span>{item.price} ₽ x {item.quantity}</span>

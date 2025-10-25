@@ -1,16 +1,19 @@
-    const {Pool} = require('pg');
+const { Pool } = require('pg');
+require('dotenv').config()
 
-    const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'floortiles_Shop',
-    password: `0000`,
-    port: 5432,
-    })
+console.log('DB Config:', {
+    user: process.env.db_user,
+    host: process.env.db_host,
+    database: process.env.db_name,
+    password: process.env.db_password,
+    port: process.env.db_port,
+});
+const pool = new Pool({
+    user: process.env.db_user,
+    host: process.env.db_host,
+    database: process.env.db_name,
+    password: process.env.db_password,
+    port: process.env.db_port,
+})
 
-    module.exports = pool; 
-
-
-
-
-    
+module.exports = pool;

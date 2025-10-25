@@ -1,4 +1,4 @@
-      import React,{ useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
       import Header from "./components/Header"
       import Footer from "./components/Footer"
       import Items from "./components/items"
@@ -9,10 +9,12 @@
       import Cart from "./components/cart";  
       import Info from "./components/information"
       import ProductDetail from "./components/product"
+      import Contacts from "./components/contacts";
       import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
       const App = () => {
         const [items, setItems] = useState([]);
+        const [cartItems, setCartItems] = useState([]);
 
         const callBackendAPI = async () => {
           const response = await fetch('/api/items');
@@ -30,6 +32,27 @@
           .catch(err => console.log(err));
         }, []);
 
+        const addToCart = (product) => {
+          setCartItems(prev => {
+            const exist = prev.find(item => item.id === product.id);
+            if (exist) {
+              return prev.map(item =>
+                item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+              );
+            } else {
+              return [...prev, { ...product, quantity: 1 }];
+            }
+          });
+        };
+
+        const removeFromCart = (id) => {
+          setCartItems(prev =>
+            prev
+              .map(item => item.id === id ? { ...item, quantity: item.quantity - 1 } : item)
+              .filter(item => item.quantity > 0)
+          );
+        };
+
         return (
         
           <Router>
@@ -42,9 +65,14 @@
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/" element={<Items items={items} />} />
               <Route path="/authorization" element={<Autorization />} />
-              <Route path="/cart" element={ <div className="cart-wrapper"> <Cart items={items} /> </div>} />
+              <Route path="/cart" element={
+              <div className="cart-wrapper">
+                <Cart items={cartItems} onRemove={removeFromCart} />
+              </div>
+            } />
               <Route path="/info" element={<Info />} />
-              <Route path="/product/:id" component={ProductDetail} />
+              <Route path="/product/:id" element={<ProductDetail onAddToCart={addToCart} />} />
+              <Route path="/contacts" element={<Contacts />} />
             </Routes>
             <Footer />
             

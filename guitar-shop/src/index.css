@@ -1,310 +1,325 @@
-                    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-                    *{
-                        margin: 0;
-                        padding: 0;
-                    }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-                    body{
-                        background: linear-gradient(to top,#FFD1DC 0%, #C9DABE 100%) no-repeat ;
-                        background-size: cover;
-                        background-attachment: fixed;
-                        background-position: center;
-                        color: #fff;
-                        font-family: "Montserrat", sans-serif;
-                        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
-                        color: #7A1623  ;
-                        font-weight: 350;
-                        
-                    }
+body {
+  background: linear-gradient(to top, #FFD1DC 0%, #C9DABE 100%) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  color: #7A1623;
+  font-weight: 350;
 
-                
-                .form{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                        height: 100vh;
-                    }
-
-                    .form input{
-                        width: 300px;
-                        height: 40px;
-                        margin-bottom: 20px;
-                        border-radius: 5px;
-                        border: none;
-                        padding-left: 10px;
-                    }
-
-                    .form button{   /* изменить цвета чтоб гуд было */
-                        width: 300px;
-                        height: 40px;
-                        background-color: #D1C4E9 ;
-                        color: #0A1A2F ;
-                        border-radius: 5px;
-                        border: none;
-                    }
-
-                    .form button:hover{
-                        background-color: #0A1A2F ;
-                        color: #D1C4E9 ;
-                    }
-
-                
-
-                    .wrapper{
-                        width: 1280px;
-                        margin: 50px auto;
-                        
-                    }
-
-                    Header .logo{
-                        font-weight: 600;
-                        font-size: 20px;
-                    }
-
-                    header ul.nav {
-                        float: right;
-                        list-style: none;
-                    }
-
-                    header .shop-cart-button{
-                        float: right;
-                        cursor: pointer;
-                        transition: color 500ms ease;
-                        margin-top: 2px;
-                    }
-                    header .shop-cart-button:hover,
-                    header .shop-cart-button.active{
-                        color: red;
-                    }
-
-                    header .user-button{
-                        float: right;
-                        cursor: pointer;
-                        transition: color 500ms ease;
-                        margin-top: 2px;
-                        margin-right: 20px;
-                    }
-                    
-                    header .user-button:active{
-                        color: red;
-
-                    }
-                    header ul.nav{
-                        margin-right: 20px;
-                    }
-
-                    header ul.nav li {
-                        display: inline;
-                        margin-left: 20px;
-                        cursor: pointer;
-                        transition: opacity 500ms ease;
-                    }
-
-                    header ul.nav li:hover{
-                        opacity: 0.7;
-                    }
-
-                    Header .presentation {
-                        z-index: 10;
-                        margin: 50px 0;
-                        background: url('./img/backGroundImg 2.jpg') no-repeat;
-                        width: 100%;
-                        height: 500px;
-                        background-size: cover;
-                        filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.99));
-                        background-color: #aa000000;
-                    border: 2px solid #fff; 
-                    border-radius: 10px; 
-                    background-blend-mode: multiply;
-                    background-position: center, center;
-                    position: relative;
-                    }
-                    Header .presentation::after{
-                        content: "Arctic Luxe";
-                        position: absolute;   
-                        top: 430px; 
-                        left: 60px;
-                        font-size: 26px;
-                        color: #ffffff    ;
-                        -webkit-text-stroke: 1px #ffffff  ;
-                    }
-
-                    header .presentation::before{
-                        content: 'Сочетание скандинавской простоты и мраморной элегантности';
-                        position: absolute; 
-                        top: 460px;
-                        left: 60px;
-                        font-size: 14px;
-                        font-weight: 300;
-                        color: #ffffff   ;
-                        -webkit-text-stroke: 1px #ffffff  ;
-                    }
-                    main{
-                        display: flex;
-                        width: 100%;
-                        flex-wrap: wrap;
-                        justify-content: space-between;
-                        color: #3a3a3a;
-                        filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.5));
-                        
-                    }
-
-                        main .item{
-                            width: 30%;
-                            color: #3A3A3A ;
-                            margin-bottom: 50px;
-                            background: #F5F5DC ;
-                            border-radius: 10px;
-                            border: 2px solid white;
-                            padding-left: 30px;
-                            padding-bottom: 15px;
-                            overflow: hidden;
-                            position: relative;
-                            padding-bottom: 20px;
-                        }
-
-                    
-
-                        main .item img{
-                            width: 100%; 
-                            height: 300px; 
-                            object-fit: contain; 
-                            display: block; 
-                            margin: 0 auto;
-                            border-radius: 10px 10px 0 0; 
-                            transition: transform 0.5s ease;
-                            cursor: pointer;
-                        }
+}
 
 
-                        main .item:hover{
-                    transform: scale(1.05);
-                        }
-                        main h2, main p, main b {
-                            margin: 10px 20px;
-                        
-                        }
-                    footer{
-                        text-align: center;
-                        margin-top: 100px;
-                    }
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
 
-                    main .add-to-card{
-                        position: absolute;
-                        right: 20px;
-                        bottom: 15px;
-                        background: #D1C4E9 ;
-                        color: #0A1A2F ;
-                        width: 35px;
-                        height: 35px;
-                        text-align: center;
-                        line-height: 35px;
-                        border-radius: 100%;
-                        cursor: pointer;
-                        font-weight: 500;
-                    }
-                    main .add-to-card:hover{
-                        transform: scale(1.5) translateY(-5px);
-                        transition: transform 0.5s ease;
-                    }
+.form input {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+}
 
-                    a {
-                        text-decoration: none; /* Убирает подчеркивание */
-                        color: inherit; /* Наследует цвет текста от родителя */
-                    }
-                    .dashboardAdmin {
-                     max-width: 500px;
-                     margin: 40px auto;
-                    background: #f8fafc;
-                    border-radius: 16px;
-                    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    padding: 32px 24px;
-    text-align: center;
+.form button {
+  /* изменить цвета чтоб гуд было */
+  width: 300px;
+  height: 40px;
+  background-color: #D1C4E9;
+  color: #0A1A2F;
+  border-radius: 5px;
+  border: none;
+}
+
+.form button:hover {
+  background-color: #0A1A2F;
+  color: #D1C4E9;
+}
+
+
+
+.wrapper {
+  width: 1280px;
+  margin: 50px auto;
+
+}
+
+Header .logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header ul.nav {
+  float: right;
+  list-style: none;
+}
+
+header .shop-cart-button {
+  float: right;
+  cursor: pointer;
+  transition: color 500ms ease;
+  margin-top: 2px;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+  color: red;
+}
+
+header .user-button {
+  float: right;
+  cursor: pointer;
+  transition: color 500ms ease;
+  margin-top: 2px;
+  margin-right: 20px;
+}
+
+header .user-button:active {
+  color: red;
+
+}
+
+header ul.nav {
+  margin-right: 20px;
+}
+
+header ul.nav li {
+  display: inline;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover {
+  opacity: 0.7;
+}
+
+Header .presentation {
+  z-index: 10;
+  margin: 50px 0;
+  background: url('./img/backGroundImg.jpg') no-repeat;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.99));
+  background-color: #aa000000;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-blend-mode: multiply;
+  background-position: center, center;
+  position: relative;
+}
+
+Header .presentation::after {
+  content: "Arctic Luxe";
+  position: absolute;
+  top: 430px;
+  left: 60px;
+  font-size: 26px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+header .presentation::before {
+  content: 'Сочетание скандинавской простоты и мраморной элегантности';
+  position: absolute;
+  top: 460px;
+  left: 60px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #3a3a3a;
+  filter: drop-shadow(0px 0px 50px rgba(37, 55, 80, 0.5));
+
+}
+
+main .item {
+  width: 30%;
+  color: #3A3A3A;
+  margin-bottom: 50px;
+  background: #F5F5DC;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding-left: 30px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+
+
+main .item img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+
+main .item:hover {
+  transform: scale(1.05);
+}
+
+main h2,
+main p,
+main b {
+  margin: 10px 20px;
+
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+}
+
+main .add-to-card {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  background: #D1C4E9;
+  color: #0A1A2F;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 100%;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+main .add-to-card:hover {
+  transform: scale(1.5) translateY(-5px);
+  transition: transform 0.5s ease;
+}
+
+a {
+  text-decoration: none;
+  /* Убирает подчеркивание */
+  color: inherit;
+  /* Наследует цвет текста от родителя */
+}
+
+.dashboardAdmin {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+  text-align: center;
 }
 
 .dashboardAdmin h1 {
-    font-size: 1.6rem;
-    margin-bottom: 32px;
-    color: #23395d;
-    font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+  color: #23395d;
+  font-weight: 700;
 }
 
 .admin-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .admin-actions button {
-    padding: 12px 0;
-    font-size: 1rem;
-    background: #23395d;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+  padding: 12px 0;
+  font-size: 1rem;
+  background: #23395d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .admin-actions button:hover {
-    background: #4267b2;
-    transform: translateY(-2px) scale(1.03);
+  background: #4267b2;
+  transform: translateY(-2px) scale(1.03);
 }
 
-                    .dashboardAdmin a {
-                        text-decoration: none;
-                        color: inherit;
-                    }
-                    .dashboardAdmin a:hover {
-                        text-decoration: underline;
-                        color: #4267b2;
-                    }
-                    .dashboard {
-    max-width: 500px;
-    margin: 40px auto;
-    background: #f8fafc;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    padding: 32px 24px;
-    text-align: center;
+.dashboardAdmin a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dashboardAdmin a:hover {
+  text-decoration: underline;
+  color: #4267b2;
+}
+
+.dashboard {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+  text-align: center;
 }
 
 .dashboard h1 {
-    font-size: 1.5rem;
-    margin-bottom: 32px;
-    color: #23395d;
-    font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+  color: #23395d;
+  font-weight: 700;
 }
 
 .user-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 300px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .user-actions button {
-    padding: 12px 0;
-    font-size: 1rem;
-    background: #23395d;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+  padding: 12px 0;
+  font-size: 1rem;
+  background: #23395d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .user-actions button:hover {
-    background: #4267b2;
-    transform: translateY(-2px) scale(1.03);
+  background: #4267b2;
+  transform: translateY(-2px) scale(1.03);
 }
 
 
@@ -329,8 +344,15 @@
 }
 
 @keyframes cartFadeIn {
-  from { opacity: 0; transform: translateY(40px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cart h2 {
@@ -446,36 +468,46 @@
   margin: 40px 0;
   font-size: 1.1rem;
 }
+
 .about-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 24px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 500px;
+  margin: 32px auto;
+  padding: 18px 12px;
+  background: linear-gradient(120deg, #f9f9f9 70%, #ffd1dc22 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(37, 55, 80, 0.10);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .main-title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 24px;
-  color: #333;
+  font-size: 26px;
+  font-weight: 700;
+  color: #7A1623;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .about-section {
-  margin-bottom: 32px;
+  margin-bottom: 18px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #d1c4e922;
+  padding: 14px 12px;
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 12px;
-  color: #222;
+  color: #23395d;
+  margin-bottom: 6px;
 }
 
 .section-text {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.4;
   color: #444;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .advantages-list {
@@ -487,64 +519,147 @@
 }
 
 .product-detail {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* Стили для изображения товара */
 .product-detail img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 /* Стили для заголовка товара */
 .product-detail h1 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 15px;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 /* Стили для описания товара */
 .product-detail p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 /* Стили для цены товара */
 .product-detail b {
-    font-size: 1.5em;
-    color: #333;
-    display: block;
-    margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+  display: block;
+  margin-bottom: 20px;
 }
 
-/* Стили для ссылки "Назад к списку товаров" */
+
 .product-detail a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-/* Эффект при наведении на ссылку */
 .product-detail a:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
-                    /*  #253750
-                        #D1C4E9 ( лавандовый, нежно розовый)
 
-                    */
+.contacts-form-section {
+  background: linear-gradient(120deg, #f5f5dc 80%, #d1c4e933 100%);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #d1c4e922;
+  padding: 24px 18px 18px 18px;
+  margin-top: 18px;
+}
 
-                    
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.contacts-form input,
+.contacts-form textarea {
+  width: 320px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1c4e9;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #23395d;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+.contacts-form input:focus,
+.contacts-form textarea:focus {
+  border: 1.5px solid #7a1623;
+  outline: none;
+}
+
+.contacts-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.contacts-form button {
+  width: 320px;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #d1c4e9 0%, #ffd1dc 100%);
+  color: #23395d;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #d1c4e955;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.contacts-form button:hover {
+  background: linear-gradient(90deg, #ffd1dc 0%, #d1c4e9 100%);
+  color: #7A1623;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.contacts-success-message {
+  color: #2e7d32;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.08rem;
+}
+
+.contacts-info-block {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px #d1c4e922;
+  padding: 18px 14px;
+  margin-bottom: 18px;
+}
+
+.contacts-info-block .section-title {
+  color: #7A1623;
+  font-size: 1.08rem;
+  margin-bottom: 4px;
+}
+
+.contacts-info-block .section-text {
+  color: #23395d;
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+}
